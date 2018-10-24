@@ -1,0 +1,26 @@
+{
+  "name": "@defy/vue-wx-jssdk",
+  "version": "0.0.4",
+  "description": "vue 微信jssdk插件",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/defypro/vue-wx-jssdk.git"
+  },
+  "keywords": [
+    "vue",
+    "微信jssdk"
+  ],
+  "author": "defy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/defypro/vue-wx-jssdk/issues"
+  },
+  "homepage": "https://github.com/defypro/vue-wx-jssdk#readme",
+  "dependencies": {
+    "@defy/wx-jssdk": "^1.0.3"
+  }
+}
