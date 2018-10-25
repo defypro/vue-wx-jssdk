@@ -14,7 +14,8 @@ Vue.use(VueWxJssdk);
 ```
 
 ## Usage
-```javacript
+```
+// ...
 mounted() {
   this.$wx.config({debug = false, appId:'', timestamp:'', nonceStr:'', signature:'', jsApiList = []})
 }
@@ -30,8 +31,5 @@ methods: {
   }
 }
 ```
-#### Another way to use vue-bus
-```
-
 ## License
 [MIT](https://opensource.org/licenses/MIT)
