@@ -1,17 +1,15 @@
 /**
- * vue-bus v0.0.4
+ * vue-bus v0.0.5
  * https://github.com/defypro/vue-wx-jssdk
  * @license MIT
  */
 (function (global, factory) {
-    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory(require('@defy/wx-jssdk')) :
-    typeof define === 'function' && define.amd ? define(['@defy/wx-jssdk'], factory) :
-    (global.VueBus = factory(global.WxJssdk));
-}(this, (function (WxJssdk) { 'use strict';
+    typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+    typeof define === 'function' && define.amd ? define(factory) :
+    (global.VueBus = factory());
+}(this, (function () { 'use strict';
 
-    WxJssdk = WxJssdk && WxJssdk.hasOwnProperty('default') ? WxJssdk['default'] : WxJssdk;
-
-    var install = function (Vue) {
+    var install = function (Vue, WxJssdk) {
         if (install.installed) { return }
 
         Vue.wx = WxJssdk;
@@ -32,6 +30,10 @@
 
         });
     };
+
+    if (typeof window !== 'undefined' && window.Vue) {
+        install(window.Vue);
+    }
 
     var index = {install: install};
 

@@ -1,6 +1,4 @@
-import WxJssdk from '@defy/wx-jssdk'
-
-const install = function (Vue) {
+const install = function (Vue, WxJssdk) {
     if (install.installed) return
 
     Vue.wx = WxJssdk
@@ -20,6 +18,10 @@ const install = function (Vue) {
         }
 
     })
+}
+
+if (typeof window !== 'undefined' && window.Vue) {
+    install(window.Vue);
 }
 
 export default {install}

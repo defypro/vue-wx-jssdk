@@ -1,11 +1,9 @@
 /**
- * vue-bus v0.0.4
+ * vue-bus v0.0.5
  * https://github.com/defypro/vue-wx-jssdk
  * @license MIT
  */
-import WxJssdk from '@defy/wx-jssdk';
-
-var install = function (Vue) {
+var install = function (Vue, WxJssdk) {
     if (install.installed) { return }
 
     Vue.wx = WxJssdk;
@@ -26,6 +24,10 @@ var install = function (Vue) {
 
     });
 };
+
+if (typeof window !== 'undefined' && window.Vue) {
+    install(window.Vue);
+}
 
 var index = {install: install};
 

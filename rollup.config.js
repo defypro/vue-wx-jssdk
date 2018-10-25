@@ -20,7 +20,7 @@ export default {
     }, {
         file: 'dist/vue-wx-jssdk.js',
         format: 'umd',
-        name: 'VueBus',
+        name: 'VueWxJssdk',
         banner
     }],
     plugins: [ buble() ]

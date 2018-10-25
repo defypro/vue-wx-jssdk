@@ -1,6 +1,6 @@
 {
   "name": "@defy/vue-wx-jssdk",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "vue 微信jssdk插件",
   "main": "dist/vue-wx-jssdk.common.js",
   "module": "dist/vue-wx-jssdk.esm.js",
@@ -21,9 +21,7 @@
     "url": "https://github.com/defypro/vue-wx-jssdk/issues"
   },
   "homepage": "https://github.com/defypro/vue-wx-jssdk#readme",
-  "dependencies": {
-    "@defy/wx-jssdk": "^1.0.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "buble": "^0.19.6",
     "rimraf": "^2.6.2",
