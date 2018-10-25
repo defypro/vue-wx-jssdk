@@ -1,5 +1,5 @@
 /**
- * vue-wx-jssdk v0.0.9
+ * vue-wx-jssdk v0.1.0
  * https://github.com/defypro/vue-wx-jssdk
  * @license MIT
  */
@@ -26,10 +26,6 @@ var install = function (Vue, WxJssdk) {
 
     });
 };
-
-if (typeof window !== 'undefined' && window.Vue) {
-    install(window.Vue);
-}
 
 var index = {install: install};
 
