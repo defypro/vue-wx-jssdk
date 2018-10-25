@@ -8,9 +8,10 @@ $ npm i @defy/vue-wx-jssdk -S
 When used with a module system, you must explicitly install the bus via Vue.use():
 ```
 import Vue from 'vue';
+import WxJssdk from '@defy/wx-jssdk'
 import VueWxJssdk from '@defy/vue-wx-jssdk';
 
-Vue.use(VueWxJssdk);
+Vue.use(VueWxJssdk, WxJssdk);
 ```
 
 ## Usage
