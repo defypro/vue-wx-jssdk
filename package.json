@@ -1,10 +1,11 @@
 {
   "name": "@defy/vue-wx-jssdk",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "vue 微信jssdk插件",
-  "main": "src/index.js",
+  "main": "dist/vue-wx-jssdk.common.js",
+  "module": "dist/vue-wx-jssdk.esm.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf dist && rollup -c && uglifyjs dist/vue-wx-jssdk.js -c -m --comments -o dist/vue-wx-jssdk.min.js"
   },
   "repository": {
     "type": "git",
@@ -15,12 +16,20 @@
     "微信jssdk"
   ],
   "author": "defy",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/defypro/vue-wx-jssdk/issues"
   },
   "homepage": "https://github.com/defypro/vue-wx-jssdk#readme",
   "dependencies": {
     "@defy/wx-jssdk": "^1.0.3"
+  },
+  "devDependencies": {
+    "buble": "^0.19.6",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.66.6",
+    "rollup-plugin-buble": "^0.19.4",
+    "uglify-js": "^3.4.9",
+    "vue": "^2.5.17"
   }
 }
