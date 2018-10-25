@@ -1,12 +1,12 @@
 /**
- * vue-bus v0.0.5
+ * vue-wx-jssdk v0.0.9
  * https://github.com/defypro/vue-wx-jssdk
  * @license MIT
  */
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
     typeof define === 'function' && define.amd ? define(factory) :
-    (global.VueBus = factory());
+    (global.VueWxJssdk = factory());
 }(this, (function () { 'use strict';
 
     var install = function (Vue, WxJssdk) {
