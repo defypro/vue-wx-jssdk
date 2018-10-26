@@ -17,7 +17,11 @@ Vue.use(VueWxJssdk, WxJssdk);
 ```
 // ...
 mounted() {
-  this.$wx.config({debug = false, appId:'', timestamp:'', nonceStr:'', signature:'', jsApiList = []})
+  this.$wx.configAsync({debug = false, appId:'', timestamp:'', nonceStr:'', signature:'', jsApiList = []}).then(res => {
+    console.log(res);
+  }).catch(e => {
+    console.log(e);
+  )
 }
 ```
 #### Trigger
@@ -25,7 +29,7 @@ mounted() {
 // ...
 methods: {
   scanQRCode() {
-    this.$wx.scanQRCode().then(res=>{
+    this.$wx.scanQRCodeAsync().then(res=>{
     	console.log(res)
     })
   }
