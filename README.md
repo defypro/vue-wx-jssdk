@@ -3,7 +3,7 @@
 ## Installation
 You can install it via [npm](https://npmjs.com).
 ```
-$ npm i @defy/vue-wx-jssdk -S
+$ npm i @defy/wx-jssdk @defy/vue-wx-jssdk -S
 ```
 ```
 import Vue from 'vue';
