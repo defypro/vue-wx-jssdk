@@ -1,30 +1,32 @@
 /**
- * vue-wx-jssdk v0.1.0
+ * vue-wx-jssdk v0.1.2
  * https://github.com/defypro/vue-wx-jssdk
  * @license MIT
  */
-var install = function (Vue, WxJssdk) {
-    if (install.installed) { return }
+var VueWxJssdk = {
+    install: function (Vue, WxJssdk) {
+        Vue.wx = WxJssdk;
 
-    Vue.wx = WxJssdk;
+        Object.defineProperties(Vue.prototype, {
 
-    Object.defineProperties(Vue.prototype, {
+            wx: {
+                get: function get() {
+                    return WxJssdk
+                }
+            },
 
-        wx: {
-            get: function get() {
-                return WxJssdk
+            $wx: {
+                get: function get() {
+                    return WxJssdk
+                }
             }
-        },
 
-        $wx: {
-            get: function get() {
-                return WxJssdk
-            }
-        }
-
-    });
+        });
+    }
 };
 
-var index = {install: install};
+if (window.Vue && window.wx) {
+    Vue.use(VueWxJssdk, window.wx);
+}
 
-export default index;
+export default VueWxJssdk;

@@ -1,23 +1,27 @@
-const install = function (Vue, WxJssdk) {
-    if (install.installed) return
+const VueWxJssdk = {
+    install: function (Vue, WxJssdk) {
+        Vue.wx = WxJssdk;
 
-    Vue.wx = WxJssdk
+        Object.defineProperties(Vue.prototype, {
 
-    Object.defineProperties(Vue.prototype, {
+            wx: {
+                get() {
+                    return WxJssdk
+                }
+            },
 
-        wx: {
-            get() {
-                return WxJssdk
+            $wx: {
+                get() {
+                    return WxJssdk
+                }
             }
-        },
 
-        $wx: {
-            get() {
-                return WxJssdk
-            }
-        }
+        })
+    }
+};
 
-    })
+if (window.Vue && window.wx) {
+    Vue.use(VueWxJssdk, window.wx)
 }
 
-export default {install}
+export default VueWxJssdk

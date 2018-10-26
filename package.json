@@ -1,6 +1,6 @@
 {
   "name": "@defy/vue-wx-jssdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "vue 微信jssdk插件",
   "main": "dist/vue-wx-jssdk.common.js",
   "module": "dist/vue-wx-jssdk.esm.js",
